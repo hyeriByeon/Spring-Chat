@@ -1,0 +1,27 @@
+create database chat_db char set utf8;
+select * from chat_user;
+create table chat_user(
+	userId varchar(20) not null primary key,
+    userName varchar(20) not null,
+    userPw	varchar(250) not null,
+    enabled	tinyint(1) default 1,
+    authority	varchar(50) default "ROLE_USER",
+    reg_date	datetime	default	now()
+);
+
+alter table chat_user
+add column userMail varchar(50) not null;
+
+
+select * from chatRoom;
+create table chatRoom(
+	roomNo	 int primary key auto_increment,
+    roomName varchar(50) not null,
+    owner	varchar(20) not null,
+    del_flag char(2) default "n",
+    roomMember	varchar(250),
+    roomType	varchar(20),
+    roomType		varchar(10),
+    reg_date datetime default now(),
+    constraint `fk_owner` foreign key(owner) references chat_user(userId)
+);
