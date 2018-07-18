@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.spring.mappers.userMapper">
+<!-- 회원가입 -->
+<select id="joinIdCheck" resultType="org.spring.chatting.model.User">
+	select * from chat_user
+	where userId = #{userId}
+</select>
+<insert id="createUser">
+	insert into chat_user (userId, userPw, userName, userMail)
+	values(#{userId}, #{userPw}, #{userName}, #{userMail});
+</insert>
+<update id="updateUser">
+	update chat_user set userMail =  #{userMail} where userId = #{userId}
+</update>
+
+<select id="getUserList" resultType="org.spring.chatting.model.User">
+   select * from chat_user
+</select>
+
+<select id="countUser" resultType="int">
+   select count(*) from chat_user
+</select>
+
+<delete id="delUser">
+   delete from chat_user where userId = #{userId}
+</delete>
+</mapper>

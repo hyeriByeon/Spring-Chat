@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!--  security none -->
+	<beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+			<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
+			<beans:property name="url" value="jdbc:mysql://192.168.0.211:3306/todoApp_db?characterEncoding=utf8" />
+			<beans:property name="username" value="hyeri" />
+			<beans:property name="password" value="bha11530" />
+	</beans:bean>
+		
+	<!-- bcrypt password -->
+	<beans:bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+		<beans:constructor-arg name="strength" value="11" />
+	</beans:bean>
+	<http pattern="/css/**" security="none"></http>
+	<http pattern="/js/**" security="none"></http>
+	<http pattern="/images/**" security="none"></http>
+	<http auto-config="true" use-expressions="true">
+		<intercept-url pattern="/" access="permitAll" />
+		<intercept-url pattern="/chat/**" access="hasAnyRole('ROLE_USER','ROLE_ADMIN','ROLE_DBA')" />
+		<intercept-url pattern="/room/**" access="hasAnyRole('ROLE_USER','ROLE_ADMIN','ROLE_DBA')" />
+		
+		<form-login login-page="/login" 
+   					username-parameter="userId"
+   					password-parameter="userPw"
+   					authentication-failure-url="/error"/>
+   		<csrf/>
+		<logout invalidate-session="true" logout-url="/logout" logout-success-url="/" />
+	</http>
+
+	<authentication-manager>	
+		<authentication-provider>
+				<password-encoder ref="encoder"></password-encoder>
+				<jdbc-user-service data-source-ref="dataSource"
+					users-by-username-query="select userId, userPw, enabled from chat_user where userId = ?"
+					authorities-by-username-query="select userId, authority from chat_user where userId = ?" />
+			</authentication-provider>
+	</authentication-manager>
+	
+</beans:beans>

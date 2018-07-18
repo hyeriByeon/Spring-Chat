@@ -1,0 +1,179 @@
+@import url(default.css);
+
+
+#header{
+	width: 100%;
+	position: fixed;
+	
+	z-index:10;
+}
+
+#header ul{
+	width: 10%;
+	float: right;
+	
+	margin-top:8px;
+	
+	overflow: hidden;
+}
+#header ul li{
+	padding: 5px 10px;
+}
+
+#header ul li .search{
+}
+
+#header a{
+	color: #fff;
+	font-size: 14px;
+	padding-left:12px;	
+}
+
+#header a:hover{
+	color: #fff;
+	font-size: 16px;
+	
+	text-decoration:none;
+	background:url("../images/nav_bg.png") left 0 top 3px no-repeat;
+}
+
+.wrap{
+	width: 89%;
+	margin:0 auto;
+}
+#container{
+	width: 100%;
+	height: 960px;
+	background:url(../images/main_bg.jpg)left top no-repeat;
+	z-index: -999;
+}
+
+#container .main_tit{
+	font-size: 65px;
+	color: #fff;
+	
+	text-align: center;
+	padding-top: 25%;
+}
+
+#container2{
+	width: 100%;
+	height: 960px;
+	background:url(../images/main_bg2.jpg)left top no-repeat;
+	z-index: -999;
+}
+
+#sub_container{
+	height: 600px;
+	background:url(../images/login_bg.jpg)left top no-repeat;
+	background-size:100%;
+}
+
+.contents{
+
+}
+
+#sub_container .loginwrap{
+	width: 100%;
+	height: 900px;
+	background-color:rgba(188, 245, 169, 0.2);
+	background-size:100%;
+	
+	height: 100%;
+	z-index: 10;
+}
+
+#sub_container .login_bg{
+	width: 60%;
+	height: 600px;
+	margin:0 auto;
+	padding-top:100px;
+	
+	background-color: rgba(255,255,255,0.3);
+}
+.paging{
+	width: 60%;
+	text-align:center;
+	margin: 0 auto;
+}
+.paging li{
+	display: inline-block;
+	float: left;
+	width: 49%;
+	height: 58px;
+	border: 1px solid #3d3d3d;
+
+}
+.paging li:first-child{
+	border-right: 0;
+}
+
+#sub_container .sub_tit{
+	font-size: 25px;
+	font-weight: 600;
+	padding-left: 10%;
+
+	
+	width:50%;
+	color: #4d4d4d;
+}
+
+#sub_container input{
+	padding-left:2%;
+	border:0;
+	width: 50%;
+	height: 36px;
+	margin-top : 10px;
+	
+	margin-left: 10%;
+}
+#sub_container ul{
+	position: relative;
+}
+#sub_container ul .sub_join{
+	text-align:center;
+	margin-top:10px;
+}
+
+#sub_container .submit{
+	overflow: hidden;	
+}
+
+#sub_container .submit input{
+	width: 22%;
+	height: 92px;
+	
+	position: absolute;
+	right: 12%;
+	top: 32px;	
+	
+	z-index:15;
+	
+	background-color: #4d4d4d;
+	color:#fff;
+}
+
+.joinWrap{
+	width: 60%;
+	height: 600px;
+	margin:0 auto;
+	padding-top:100px;
+}
+.agree div{width:390px;display:inline-block;}
+.agree div.use{margin-right:14px;}
+.agree div h2{display:none;}
+.agree div{width:390px;display:inline-block;}
+.agree div p{overflow-y:scroll;height:200px;margin-bottom:10px;border:1px solid #ccc;background:#f4f4f4;font-size:11px;padding:15px;}
+.agrall{margin:30px 0;padding:10px 0;text-align:center;font-weight:500;font-size:16px;background:#f4f4f4;}
+dl{border-top:1px solid #ccc;}
+dl dt{display:inline-block;float:left;border-bottom:1px solid #ccc;width:170px;height:35px;margin-top:10px;}
+dl dd{margin:10px 0 0 170px;border-bottom:1px solid #ccc;height:35px;font-weight:500;}
+dl dd.input_size input{width:150px;}
+dl dd .input_txt{height:22px;border:1px solid #999;}
+dl dd select{height:26px;border:1px solid #999}
+dl dd .btn_id{background:#333;color:#fff;border-radius:3px;text-decoration:none;padding:3px 5px;border: 0;margin-left: 10px;}
+.join_btn{text-align:center;margin:25px 0;}
+.join_btn input{padding:8px 20px;font-weight:500;background:#333;color:#fff;border-radius:3px;border:0;font-size:17px;}
+
+
+
