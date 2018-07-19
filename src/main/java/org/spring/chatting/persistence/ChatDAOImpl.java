@@ -77,5 +77,15 @@ public class ChatDAOImpl implements ChatDAO {
 	public int getTotalRoomNum() throws Exception {
 		return sqlSession.selectOne(name+".countRoom");
 	}
+	
+	@Override
+	public String getRoomType(int roomNo) throws Exception {
+		return sqlSession.selectOne(name + ".getType", roomNo);
+	}
+
+	@Override
+	public void changeRoomType(Map<String, String> params) throws Exception {
+		sqlSession.update(name + ".changeRoomType", params);
+	}
 
 }

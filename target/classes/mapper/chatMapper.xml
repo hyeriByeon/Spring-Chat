@@ -49,4 +49,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   <update id="updateOwner">
       update chatRoom set owner = #{newOwner} where roomNo = ${roomNo};
    </update>
+   
+     <select id="getType" resultType="String">
+     select roomType from chatRoom where roomNo = #{roomNo}
+  </select>
+
+  <update id="changeRoomType">
+     update chatRoom set roomType = #{roomType} where roomNo = ${roomNo};
+  </update>
 </mapper>

@@ -69,7 +69,11 @@ public class AjaxController {
 	   
 	   @RequestMapping(value = "/updatePw", method = RequestMethod.GET)
 	   public int updatePw(int roomNo, String newPass) throws Exception {
-	      
+		  
+		   if(newPass.isEmpty()) {
+			  return -1;
+		  }
+		  
 	      return service.updatePass(roomNo, newPass);
 	   }
 		
