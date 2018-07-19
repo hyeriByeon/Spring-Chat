@@ -6,6 +6,127 @@
  <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
  <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ page session="false"%>
+<jsp:include page ="/WEB-INF/views/common/header.jsp" flush="false" />
+
+<style>
+	body{
+		overflow: hidden;
+	}
+	#header li a{
+		color:#3d3d3d;
+	}
+	
+	#header li a:hover{
+		color:#adadad;
+	}
+	
+	.wrap{
+		text-align: center;
+		
+		position: absolute;
+		top: 120px;
+	}
+	
+	.wrap h2{
+		margin: 20px auto;
+	}
+	
+	table{	
+		width: 68%;
+		margin: 0 auto;
+		border-collapse:collapse;
+	}
+	table, tr, td, th{
+		border: 1px solid #3d3d3d;
+	}
+	
+	tbody input{
+		width: 45%;
+	}
+	thead tr{
+		height: 40px;
+	}
+	
+	tbody tr{
+		height: 34px;
+	}
+	
+	button{
+		width:50%;
+		text-align: center;
+		
+		color:#fff;
+		background-color: #3d3d3d;
+		
+		border: 0;
+		height: 25px;
+	}
+	
+	tfoot tr{
+		height: 36px;
+	}
+	
+	.wrap_table{
+		width: 89%;
+		overflow:hidden;
+		position:absolute;
+		top: 160px;
+		left:5%;
+	}
+	
+	.text-center{
+	
+		margin-top:10px;
+	}
+	.pagination{
+		width: 60%;
+		margin: 0 auto;
+		
+		text-align: center;
+	}
+	.pagination li{
+		display: inline-block;
+		padding: 10px 5px 0 5px;
+	}
+	
+	.cre{
+		float:right;
+	
+		width: 120px;
+		height: 30px;
+		
+		padding-top:10px;
+		margin-right: 10%;
+		
+		text-align: center;
+		border: 1px solid #ededed;
+	}
+	
+	.cre a:hover{
+		text-decoration: none;
+		color: #aeaeae;
+	}
+	
+	.wrap{
+		width: 100%;
+	}
+	
+	#userMail1{
+		width: 21.5%;
+	}
+	
+	#userMail2{
+		width:21.5%;
+	}
+	
+	tfoot input{
+		background-color: #3d3d3d;
+		border: 0;
+		color: #fff;
+		
+		height: 30px;
+	}
+</style>
 
 <script type="text/javascript" src="/js/chkPass.js"></script>
 <script type="text/javascript" src="/js/jquery-1.12.4.js"></script>

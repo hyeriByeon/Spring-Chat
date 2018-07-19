@@ -14,7 +14,8 @@
 				
 				success:function(data){
 					if(data == 1){//패스워드가 일치하면
-						alert('vodd');
+						
+						alert('정상적으로 완료되었습니다.');
 						$(".passResult").text("패스워드가 일치합니다.");
 						var mail = '@';
 						

@@ -16,7 +16,7 @@ public interface ChatDAO {
 	public ChatRoom getRoomByOwner(String owner) throws Exception;
 	public String getMembers(int roomNo) throws Exception;
 	public void addMember(Map<String, String> params) throws Exception;
-	public void updatePass(Map<String, String> params) throws Exception;
+	public int updatePass(Map<String, String> params) throws Exception;
 	public String getOwner(int roomNo) throws Exception;
 	public void updateOwner(Map<String, String> params2)throws Exception;
 }

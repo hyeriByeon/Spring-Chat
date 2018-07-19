@@ -90,7 +90,8 @@ public class ChatController {
 												, Criteria cri) throws Exception {
 		// 방에 멤버 추가해줌
 		System.out.println(roomNo +""+ room + "---- -------");
-		
+
+	
 		chatService.addMember(roomNo, princ.getName());
 		model.addAttribute("cri", cri);
 		model.addAttribute("room", chatService.getRoom(roomNo));

@@ -7,12 +7,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
+<title>Welcome Rain Chat Service</title>
 <jsp:include page ="/WEB-INF/views/common/header.jsp" flush="false" />
 <script>
 function checkPersonnel(roomNo, roomPw, result) {
 	  /* 	alert(typeof roomNo + roomPw + result); */
-
 	   $.ajax ({
 	      type:'get',
 	      url:'/checkPersonnel',
@@ -25,7 +24,6 @@ function checkPersonnel(roomNo, roomPw, result) {
 	            alert("방 인원이 꽉 찼습니다");
 	            return false;
 	         } else {
-	        	 alert(!result + data );
 	            if (!result) {
 	               check(roomNo, roomPw);
 	            } else {
@@ -42,7 +40,7 @@ function check(roomNo, roomPw){
 	
 	var input = prompt('패스워드를 입력하세요 > ');
 	if(input == roomPw){
-		alert("일치함");
+		alert("패스워드가 일치됩니다. 방에 입장되셨습니다.");
 		
 		submitForm(roomNo);
 	}else{

@@ -26,15 +26,14 @@ public class AjaxService {
 	}
 
 
-	public void updatePass(int roomNo, String newPass) throws Exception {
+	public int updatePass(int roomNo, String newPass) throws Exception {
 		
       Map<String, String> params = new HashMap<>();
       
       params.put("roomNo", roomNo + "");
       params.put("newPass", newPass);
       
-      chatdao.updatePass(params);
-		   
+      return chatdao.updatePass(params);	   
 	}
 	
 	 public String getUserList(int roomNo) throws Exception {

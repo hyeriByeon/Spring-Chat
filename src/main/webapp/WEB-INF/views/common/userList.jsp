@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
+<title>Welcome Rain Chat Service</title>
 <jsp:include page ="/WEB-INF/views/common/header.jsp" flush="false" />
 
 <style>

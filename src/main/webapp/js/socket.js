@@ -78,7 +78,7 @@ $(document).ready(function(){
                    },// para 1/ -1
             
                   success:function(data){
-                	  alert(data);
+             
                      if(data == -1){
                     	 viewList();
                      }else{
@@ -98,9 +98,10 @@ $(document).ready(function(){
 
 	function viewList(){
 	
-		alert('viewList');
 		var url = "/chat/chatList?page=" + page + "&perPageNum=" + perPageNum;
 		location.replace(url);
+		
+//		location.reload();
 	}
 
 
@@ -175,7 +176,7 @@ $(document).ready(function(){
 });
 
 function isOwner(roomNo, userId){
-	alert(roomNo + userId);
+//	alert(roomNo + userId);
 	 $.ajax ({
 	       type:'get',
 	       url:'/isOwner',

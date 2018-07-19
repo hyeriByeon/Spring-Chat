@@ -57,8 +57,9 @@ public class ChatDAOImpl implements ChatDAO {
 	}
 	
 	@Override
-   public void updatePass(Map<String, String> params) throws Exception {
-      sqlSession.update(name+".updatePass", params);
+   public int updatePass(Map<String, String> params) throws Exception {
+      
+		return sqlSession.update(name+".updatePass", params);
    }
 
 	@Override

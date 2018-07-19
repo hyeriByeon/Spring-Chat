@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>{{room.roomName}}</title>
+<title>Welcome Rain Chat Service</title>
 <script src="/dist/sockjs.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
 <script type="text/javascript" src="/js/jquery-1.12.4.js"></script>
