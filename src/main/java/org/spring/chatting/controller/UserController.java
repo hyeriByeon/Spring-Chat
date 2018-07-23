@@ -62,13 +62,6 @@ public class UserController {
       return "common/userList";
    }
    
- /*  @RequestMapping(value="userInfo", method=RequestMethod.GET)
-   public String userInfo(Model model, String userId, Criteria cri) {
-      model.addAttribute("user", service.getUser(userId));
-      model.addAttribute("cri", cri);
-      return "common/userInfo";
-   }*/
-   
    @RequestMapping(value="deleteUser", method = RequestMethod.POST)
    public String delUser(Principal prin){
 	   

@@ -75,7 +75,6 @@
 			<dt><label for="userId">아이디</label> <span class="must">(필수)</span></dt>
 			<dd><input class="input_txt" type="text" name="userId" id="userId" required /><button id="chk_btn" class="btn_id" type="button">중복 검사</button>
 			 <input type="hidden" id="chkOkId" /><!-- 중복검사가 완료된 아이디 -->
-                       	<input type="hidden" id="idChk" />
 			<dt><label for="userPw">패스워드</label> <span class="must">(필수)</span></dt>
 			<dd><input class="input_txt" type="password" name="userPw" id="userPw" required /></dd>
 			<dt><label for="userPw2">패스워드 확인</label> <span class="must">(필수)</span></dt>

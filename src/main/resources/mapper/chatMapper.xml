@@ -55,6 +55,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   </select>
 
   <update id="changeRoomType">
-     update chatRoom set roomType = #{roomType} where roomNo = ${roomNo};
+     update chatRoom set roomType = #{roomType} where roomNo = ${roomNo}
   </update>
 </mapper>

@@ -17,7 +17,6 @@ $(document).ready(function(){
 						alert("이미 존재하는 아이디 입니다.");
 						$("#userId").val("");
 						$("#userId").focus();
-						 $(this).remove();
 					}else if(data == -1 && pattern.test($("#userId").val())){
 						alert("사용할 수 있는 아이디");
 						result = 1;

@@ -49,7 +49,7 @@ public class AjaxController {
 	      
 	      
 	      if(members == null) {
-	    	  System.out.println("멤버가널인데?");
+	    	  	return 0;
 	      }
 	      
 	      if (members.startsWith(",")) {

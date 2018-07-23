@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 
 import org.spring.chatting.model.Message;
 import org.spring.chatting.service.AjaxService;
+import org.spring.chatting.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -18,6 +19,9 @@ public class MessageController {
 	
 	@Autowired
 	AjaxService service;
+	
+	@Autowired
+	UserService userService;
     // 채팅 메세지 전달
     @MessageMapping("/app/{roomNo}")
     @SendTo("/subscribe/chat/{roomNo}")
